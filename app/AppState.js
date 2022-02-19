@@ -5,7 +5,7 @@ import { isValidProp } from "./Utils/isValidProp.js"
 
 const testTask = new Task(
   {
-    name: 'Feed the dog',
+    name: 'Create',
     color: '#8E44AD'
   }
 )
