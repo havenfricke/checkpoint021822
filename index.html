@@ -31,11 +31,11 @@
   </style>
 </head>
 
-<body class="debug">
+<body class="">
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark darken-20 text-light no-select">
       <a class="navbar-brand ms-3" href="#">
-        <span class="ms-2">📓 TASKMASTER </span>
+        <span class="ms-2 no-select">📓 TASKMASTER </span>
       </a>
     </nav>
   </header>
@@ -50,7 +50,7 @@
               <div class="d-flex align-items-end">
                 <input required type="text" name="name" id="name" class="form-control mx-2" placeholder="Task Name...">
                 <select class="form-control mx-2" name="color" id="color">
-                  <option disabled selected>Choose your color</option>
+                  <option disabled selected>Choose a color...</option>
                   <option type="color" value="#8E44AD">Purple</option>
                   <option type="color" value="#2980B9">Blue</option>
                   <option type="color" value="#E74C3C">Red</option>
@@ -58,7 +58,7 @@
                   <option type="color" value="#F1C40F">Yellow</option>
                   <option type="color" value="#1CE1CE">Cyan</option>
                 </select>
-                <button class="btn btn-success ms-2">Add</button>
+                <button title="Add a task" class="btn btn-success ms-2">+</button>
               </div>
             </div>
           </form>
@@ -71,7 +71,7 @@
 
         <!-- SECTION Task template start-->
 
-        <!-- <div class="col-4 bg-light card">
+        <!-- <div class="col-4 col-md-6 col-sm-12 bg-light card">
 
           <h2 class="text-light text-start row p-3 rounded-top" style="background-color: #8E44AD;"><b
               class="col-10">Task Name here</b> <i type="button"
@@ -104,7 +104,7 @@
   </main>
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
-      <p><small>Made with 💖 by Codeworks</small></p>
+      <p><small>Made with 🍕 by Bing Bong</small></p>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

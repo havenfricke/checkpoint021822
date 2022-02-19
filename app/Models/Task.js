@@ -11,7 +11,7 @@ export class Task {
 
   get Template() {
     return `
-    <div class="col-4 bg-light card">
+    <div class="col-lg-4 col-md-4 col-sm-12 bg-light card">
 
     <h2 class="text-light text-start row p-3 rounded-top" style="background-color: ${this.color};"><b
         class="col-10">${this.name}</b> <i type="button"
