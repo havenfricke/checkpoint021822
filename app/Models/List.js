@@ -9,10 +9,12 @@ export class List {
 
   get Template() {
     return `
+    <input class="col-2" type="checkbox" name="name" id="name">
     <li class="d-flex col-10 border-bottom border-dark justify-content-between">
                 <h6>${this.name}</h6> <i type="button" class="mdi mdi-delete text-danger fs-6" title="Delete list item"
                   onclick="app.listsController.deleteListItem('${this.id}')"></i>
-              </li>`
+              </li>
+              </input>`
   }
 
 }

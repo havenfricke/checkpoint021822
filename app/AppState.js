@@ -5,23 +5,18 @@ import { isValidProp } from "./Utils/isValidProp.js"
 
 const testTask = new Task(
   {
-    name: 'Create',
+    name: 'Create a task',
     color: '#8E44AD'
   }
 )
 
-const testList = new List(
-  {
-    name: 'put food in bowl'
-  }
-)
 
 class AppState extends EventEmitter {
   /** @type {import('./Models/Task').Task[]} */
   tasks = [testTask]
 
   /** @type {import('./Models/List').List[]} */
-  lists = [testList]
+  lists = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

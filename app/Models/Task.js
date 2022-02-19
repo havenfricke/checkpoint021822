@@ -18,17 +18,17 @@ export class Task {
         class="mdi text-center d-flex justify-content-end col-2 mdi-delete text-light fs-2" title="Delete task"
         onclick="app.tasksController.deleteTask('${this.id}')"></i>
     </h2>
+   
     <h6 class="text-end col-12">3/6 Items Completed</h4>
-      <ul class="bg-light d-flex justify-content-between align-items-center rounded border-light col-12 p-2">
-        <input class="col-2" type="checkbox" name="checklistitem" id="checklistitem">
+      <ul class="bg-light d-flex justify-content-between align-items-center rounded border-light row p-2">
         ${this.ListsTemplate}
-        </input>
       </ul>
 
+      
       <form onsubmit="app.listsController.createListItem('${this.id}')">
         <div class="d-flex row justify-content-around p-4">
-          <input required type="text" name="list-item" id="list-item" class="col-10"
-            placeholder="List item..."><button class="col-2 btn btn-secondary"
+          <input required type="text" name="name" id="name" class="col-10"
+            placeholder="Add a list item..."><button class="col-2 btn btn-secondary"
             title="Add a task"><b>+</b></button>
         </div>
       </form>
