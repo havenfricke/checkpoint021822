@@ -17,7 +17,7 @@ export class TasksController {
     //loadstatehere
   }
   createTask() {
-    console.log('createTask - controller');
+    console.log('hello from createTask - TasksController');
     window.event.preventDefault()
     const form = window.event.target
 
@@ -28,7 +28,7 @@ export class TasksController {
     tasksService.createTask(rawTask)
   }
   deleteTask(id) {
-    console.log('deleteTask');
+    console.log('Hello from deleteTask - Tasks Controller');
     tasksService.deleteTask(id)
   }
 }

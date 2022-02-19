@@ -6,7 +6,7 @@ export class Task {
     this.id = data.id || generateId()
     this.name = data.name
     this.color = data.color
-    this.total = data.total
+    this.bool = data.bool
   }
 
   get Template() {
@@ -21,14 +21,11 @@ export class Task {
     <h6 class="text-end col-12">3/6 Items Completed</h4>
       <ul class="bg-light d-flex justify-content-between align-items-center rounded border-light col-12 p-2">
         <input class="col-2" type="checkbox" name="checklistitem" id="checklistitem">
-        <li class="d-flex col-10 border-bottom border-dark justify-content-between">
-          <h6>list item 1</h6> <i type="button" class="mdi mdi-delete text-danger fs-6" title="Delete list item"
-            onclick="app.tasksController.deleteListItem('${this.id}')"></i>
-        </li>
+        ${this.ListsTemplate}
         </input>
       </ul>
 
-      <form onsubmit="app.tasksController.createListItem('${this.id}')">
+      <form onsubmit="app.listsController.createListItem('${this.id}')">
         <div class="d-flex row justify-content-around p-4">
           <input required type="text" name="list-item" id="list-item" class="col-10"
             placeholder="List item..."><button class="col-2 btn btn-secondary"
@@ -46,18 +43,8 @@ export class Task {
     return template
   }
 
-  get Total() {
-    let out = 0
-    switch (this.total) {
-      case '1':
-        out += 1
-        break
-    }
-    const myTotal = ProxyState.lists.filter(t => t.listId == this.id)
+  //NOTE--WOROK ON TOTAL TASKS COMPLETED HERE
 
-    out += myTotal.length
-
-    return out
-  }
-  //total tasks complete get command goes here
 }
+
+
