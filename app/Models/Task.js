@@ -29,7 +29,7 @@ export class Task {
         <div class="d-flex row justify-content-around p-4">
           <input required type="text" name="name" id="name" class="col-10"
             placeholder="Add a list item..."><button class="col-2 btn btn-secondary"
-            title="Add a task"><b>+</b></button>
+            title="Add a list item"><b>+</b></button>
         </div>
       </form>
 
@@ -43,7 +43,9 @@ export class Task {
     return template
   }
 
-  //NOTE--WOROK ON TOTAL TASKS COMPLETED HERE
+  // const myLists = ProxyState.lists.filter(l => l.listId == this.id)
+
+  // out += myLists.length
 
 }
 
