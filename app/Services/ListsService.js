@@ -8,9 +8,9 @@ class ListsService {
   }
 
   checkedItem(rawCheck) {
-    console.log('checkedItem - ListsService', rawCheck)
+    ProxyState.lists = [...ProxyState.lists.fill(rawCheck, 0, 0)]
+    console.log('checkedItem - TasksService', rawCheck, ProxyState.lists)
   }
-
   createListItem(rawList) {
     console.log('hello from createListItem - ListsService', rawList)
     const list = new List(rawList)

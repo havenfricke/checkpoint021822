@@ -18,7 +18,6 @@ export class TasksController {
     ProxyState.on('tasks', saveState)
     ProxyState.on('lists', saveState)
 
-
     loadState()
   }
   createTask() {
@@ -28,10 +27,13 @@ export class TasksController {
 
     const rawTask = {
       name: form.name.value,
-      color: form.color.value
+      color: form.color.value,
     }
     tasksService.createTask(rawTask)
+    console.log(rawTask)
   }
+
+
 
   async deleteTask(id) {
     console.log('Hello from deleteTask - Tasks Controller', id);

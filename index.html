@@ -48,10 +48,11 @@
           <form onsubmit="app.tasksController.createTask()">
             <div class="m-3">
               <div class="d-flex align-items-end">
-                <input required type="text" name="name" id="name" class="form-control mx-2" placeholder="Task Name...">
-                <select class="form-control mx-2" name="color" id="color">
-                  <option disabled selected>Choose a color...</option>
-                  <option type="color" value="#8E44AD">Purple</option>
+                <input required maxlength="30" minlength="3" type="text" name="name" id="name" class="form-control mx-2"
+                  placeholder="Task Name...">
+                <select required class="form-control mx-2" name="color" id="color">
+                  <option disabled>Choose a color...</option>
+                  <option type="color" value="#8E44AD" selected>Purple</option>
                   <option type="color" value="#2980B9">Blue</option>
                   <option type="color" value="#E74C3C">Red</option>
                   <option type="color" value="#1ABC9C">Green</option>

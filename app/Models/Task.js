@@ -7,6 +7,7 @@ export class Task {
     this.id = data.id || generateId()
     this.name = data.name
     this.color = data.color
+
   }
 
 
@@ -28,7 +29,7 @@ export class Task {
       
       <form onsubmit="app.listsController.createListItem('${this.id}')">
         <div class="d-flex row justify-content-around p-4">
-          <input required type="text" name="name" id="name" class="col-10"
+          <input required maxlength="15" minlength="3" type="text" name="name" id="name" class="col-10"
             placeholder="Add a list item..."><button class="col-2 btn btn-secondary"
             title="Add a list item"><b>+</b></button>
         </div>
@@ -37,6 +38,7 @@ export class Task {
   </div>
     `
   }
+
   get ListsTemplate() {
     let template = ''
     const myLists = ProxyState.lists.filter(l => l.listId == this.id)
@@ -46,5 +48,12 @@ export class Task {
 
 
 }
+
+
+
+
+
+
+
 
 
