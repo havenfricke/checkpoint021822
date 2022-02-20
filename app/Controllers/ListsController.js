@@ -13,7 +13,7 @@ export class ListsController {
     const rawList = {
       listId,
       name: form.name.value,
-      bool: form.checked
+      checkbox: form.checked
     }
     console.log('Hello from end of creatListItem - ListsCrontroller', rawList)
     listsService.createListItem(rawList)
@@ -24,7 +24,7 @@ export class ListsController {
     const form = window.event.target
 
     const rawCheck = {
-      bool: form.checked
+      checkbox: form.checked
     }
     listsService.checkedItem(rawCheck)
     console.log('Hello from checkedItem - ListsController', rawCheck)
