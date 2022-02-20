@@ -3,17 +3,17 @@ import { Task } from "./Models/Task.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
-const testTask = new Task(
-  {
-    name: 'Create a task',
-    color: '#8E44AD'
-  }
-)
+// const testTask = new Task(
+//   {
+//     name: 'Create a task',
+//     color: '#8E44AD'
+//   }
+// )
 
 
 class AppState extends EventEmitter {
   /** @type {import('./Models/Task').Task[]} */
-  tasks = [testTask]
+  tasks = []
 
   /** @type {import('./Models/List').List[]} */
   lists = []

@@ -13,6 +13,8 @@ class TasksService {
     ProxyState.tasks = [...ProxyState.tasks, task]
     console.log(task);
   }
+
+
 }
 
 export const tasksService = new TasksService()

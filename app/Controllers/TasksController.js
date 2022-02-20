@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js"
 import { tasksService } from "../Services/TasksService.js"
+import { loadState, saveState } from "../Utils/LocalStorage.js";
 import { Pop } from "../Utils/Pop.js";
 
 function _drawTask() {
@@ -14,8 +15,11 @@ export class TasksController {
   constructor() {
     ProxyState.on('tasks', _drawTask)
     ProxyState.on('lists', _drawTask)
-    _drawTask()
-    //loadstatehere
+    ProxyState.on('tasks', saveState)
+    ProxyState.on('lists', saveState)
+
+
+    loadState()
   }
   createTask() {
     console.log('hello from createTask - TasksController');
@@ -28,6 +32,7 @@ export class TasksController {
     }
     tasksService.createTask(rawTask)
   }
+
   async deleteTask(id) {
     console.log('Hello from deleteTask - Tasks Controller', id);
     if (await Pop.confirm()) {

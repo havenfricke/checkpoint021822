@@ -6,6 +6,11 @@ class ListsService {
     console.log('hello from deleteListItem - ListsService', id)
     ProxyState.lists = ProxyState.lists.filter(t => t.id != id)
   }
+
+  checkedItem(rawCheck) {
+    console.log('checkedItem - ListsService', rawCheck)
+  }
+
   createListItem(rawList) {
     console.log('hello from createListItem - ListsService', rawList)
     const list = new List(rawList)

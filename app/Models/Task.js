@@ -1,13 +1,14 @@
 import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/generateId.js"
 
+
 export class Task {
   constructor(data) {
     this.id = data.id || generateId()
     this.name = data.name
     this.color = data.color
-    this.bool = data.bool
   }
+
 
   get Template() {
     return `
@@ -19,7 +20,7 @@ export class Task {
         onclick="app.tasksController.deleteTask('${this.id}')"></i>
     </h2>
    
-    <h6 class="text-end col-12">3/6 Items Completed</h4>
+    <h6 class="text-end col-12"> 0/1 Items Completed</h4>
       <ul class="bg-light d-flex justify-content-between align-items-center rounded border-light row p-2">
         ${this.ListsTemplate}
       </ul>
@@ -43,9 +44,6 @@ export class Task {
     return template
   }
 
-  // const myLists = ProxyState.lists.filter(l => l.listId == this.id)
-
-  // out += myLists.length
 
 }
 
