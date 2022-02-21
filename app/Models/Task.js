@@ -21,7 +21,7 @@ export class Task {
         onclick="app.tasksController.deleteTask('${this.id}')"></i>
     </h2>
    
-    <h6 class="text-end col-12"> 0/1 Items Completed</h4>
+    <h6 class="text-end col-12"> ${this.Completed}/${this.Total} Items Completed</h4>
       <ul class="bg-light d-flex justify-content-between align-items-center rounded border-light row p-2">
         ${this.ListsTemplate}
       </ul>
@@ -44,6 +44,14 @@ export class Task {
     const myLists = ProxyState.lists.filter(l => l.listId == this.id)
     myLists.forEach(l => template += l.Template)
     return template
+  }
+
+  get Total() {
+    return ProxyState.lists.filter(l => l.listId == this.id).length
+  }
+
+  get Completed() {
+    return ProxyState.lists.filter(l => l.listId == this.id && l.isComplete).length
   }
 
 

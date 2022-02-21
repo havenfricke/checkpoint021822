@@ -20,12 +20,12 @@ export class ListsController {
   }
 
   checkedItem(listId) {
-    const input = window.event.target
+    // const input = window.event.target
 
-    const rawCheck = {
-      listId,
-      checkbox: input.checked
-    }
+    // const rawCheck = {
+    //   listId,
+    //   checkbox: input.checked
+    // }
     listsService.checkedItem(listId)
     console.log('Hello from checkedItem - ListsController', listId)
   }
