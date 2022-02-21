@@ -13,21 +13,21 @@ export class ListsController {
     const rawList = {
       listId,
       name: form.name.value,
-      checkbox: form.checked
     }
     console.log('Hello from end of creatListItem - ListsCrontroller', rawList)
     listsService.createListItem(rawList)
     console.log('List Created', rawList, ProxyState.lists)
   }
 
-  checkedItem() {
-    const form = window.event.target
+  checkedItem(listId) {
+    const input = window.event.target
 
     const rawCheck = {
-      checkbox: form.checked
+      listId,
+      checkbox: input.checked
     }
-    listsService.checkedItem(rawCheck)
-    console.log('Hello from checkedItem - ListsController', rawCheck)
+    listsService.checkedItem(listId)
+    console.log('Hello from checkedItem - ListsController', listId)
   }
 
 

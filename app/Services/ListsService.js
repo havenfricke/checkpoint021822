@@ -8,8 +8,11 @@ class ListsService {
   }
 
   checkedItem(rawCheck) {
-    ProxyState.lists = [...ProxyState.lists.fill(rawCheck, 0, 0)]
-    console.log('checkedItem - TasksService', rawCheck, ProxyState.lists)
+    let template = ''
+    const checks = ProxyState.lists
+    checks.forEach(t => template += t.Template)
+    document.getElementById('checkbox').innerHTML = template
+    console.log('end of checkedItem - ListsService', rawCheck);
   }
   createListItem(rawList) {
     console.log('hello from createListItem - ListsService', rawList)
